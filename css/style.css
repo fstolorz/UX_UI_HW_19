@@ -1,0 +1,307 @@
+body{
+    margin: 0;
+    padding: 0;
+    background: white;
+    font-family: 'DM Sans', sans-serif;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: hidden;
+}
+
+header{
+    background: white;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+
+}
+
+header::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.logo{
+    float: left;
+    height: 30px;
+    padding: 10px 0;
+}
+
+nav{
+    float: right;
+}
+
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li{
+    float: left;
+    display: block;
+    text-align: center;
+    margin-left: 70px;
+    padding-top: 25px;
+    position: relative;
+}
+
+nav a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover{
+    color: pink;
+}
+
+nav a::before{
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background-color: blue;
+    position: absolute;
+    top: 0;
+    width: 0%;
+    transition: all ease-in-out 250ms;
+}
+
+nav a:hover::before{
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    align-items: center;
+
+}
+
+img{
+    height: 475px;
+
+}
+
+.drawing{
+    flex-basis: 40%;
+    padding: 50px;
+}
+
+.siteTitle{
+    font-size: 20px;
+    padding: 60px;
+}
+
+footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+footer{
+    text-align: center;
+    background-color: #ececec;
+}
+
+footer ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+footer li{
+    display: inline-block;
+    margin-left: 70px;
+    padding-top: 25px;
+    position: relative;
+}
+
+footer a{
+    color: black;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+footer a:hover{
+    color: pink;
+}
+
+.projects{
+    margin: 0 auto;
+    display: grid;
+    padding-top: 25px;
+    padding-bottom: 10px;
+    min-height: 1200px;
+    grid-template-rows: 300px 300px;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 230px;
+    grid-template-areas:
+    "givingforgood usps"
+    "bookbar adventuroo";
+}
+
+#givingforgood{
+    grid-area: givingforgood;
+    background-image: url(../images/givingforgood.png);
+}
+
+#usps{
+    grid-area: usps;
+    background-image: url(../images/usps.png);
+}
+
+#bookbar{
+    grid-area: bookbar;
+    background-image: url(../images/bookbar.png);
+}
+
+#adventuroo{
+    grid-area: adventuroo;
+    background-image: url(../images/adventuroo.png);
+}
+
+.projectsArea{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 50px;
+    cursor: pointer;
+    display: grid;
+    align-content: end;
+    height: 400px;
+    padding: 20px;
+}
+
+
+
+/*--  My UX Skills section coded using CSS flex --*/
+.mySkills{
+    background-color: #F2F2F2;
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+#header {
+    margin: 70px;
+    text-align: center;
+}
+
+.flexContainer{
+    display: flex;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    justify-content: space-between;
+
+}
+
+.flexContainer div{
+    width: 70%;
+    padding: 10px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+h2{
+    font-size: 20px;
+    font-weight: 300;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+p{
+    font-size: 15px;
+    font-weight: 100;
+}
+
+.description{
+    font-size: 15px;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 70%;
+}
+
+.title{
+    display: flex;
+    align-items: center;
+    background-color: #8C7EF4;
+    color: white;
+    border-radius: 50px;
+    height: 35px;
+    align-items: center;
+}
+
+@media only screen and (max-width: 600px){
+
+    .projects{
+    grid-template-rows: 300px 300px 300px 300px;
+    grid-template-columns: 1fr;
+    grid-row-gap: 230px;
+    grid-template-areas:
+    "givingforgood"
+    "usps"
+    "bookbar"
+    "adventuroo";
+}
+
+.flexContainer{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+
+.flexContainer div{
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.description{
+    font-size: 15px;
+    font-weight: 100;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    align-items: center;
+
+}
+
+nav li{
+    float: none;
+    width: 60%;
+}
+
+}
+
